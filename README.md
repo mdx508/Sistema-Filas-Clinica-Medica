@@ -65,10 +65,12 @@ O sistema foi desenvolvido como atividade acadêmica da disciplina de Estrutura 
 
 ## 9. Imagens do Sistema
 
+As imagens abaixo apresentam a interface do sistema e o histórico de atendimentos.
+
 ### 9.1 Tela principal do sistema
 
-![Tela principal do sistema](./imagens/tela-principal.png)
+[Visualizar tela principal do sistema](https://drive.google.com/file/d/14lR2FW0P6ffXIak2c-05tbPoQqOjYeFr/view?usp=drive_link)
 
 ### 9.2 Histórico de atendimentos
 
-![Histórico de atendimentos](./imagens/historico.png)
+[Visualizar histórico de atendimentos](https://drive.google.com/file/d/1BT02lo0gE4nAA0AVN33jdw25_T5Jucq3/view?usp=drive_link)
