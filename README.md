@@ -1,119 +1,74 @@
+
 # Sistema de Gerenciamento de Filas - Clínica Médica
 
-## Sobre o projeto
+## 1. Objetivo do Projeto
 
-O Sistema de Gerenciamento de Filas para Clínica Médica é um projeto acadêmico desenvolvido para a disciplina de **Estrutura de Dados II**, do Centro Universitário UDF.
+O projeto tem como objetivo desenvolver um sistema de gerenciamento de filas para uma clínica médica, utilizando Python e a biblioteca Tkinter.
 
-O objetivo é desenvolver uma aplicação em Python com interface gráfica utilizando a biblioteca Tkinter, permitindo organizar e gerenciar o atendimento de pacientes em diferentes especialidades médicas.
+O sistema permite emitir senhas, organizar pacientes por especialidade e categoria, chamar o próximo paciente e consultar o histórico de atendimentos.
 
-O sistema utiliza estruturas de dados do tipo fila FIFO (First In, First Out) e filas de prioridade para organizar a ordem de atendimento.
+## 2. Funcionalidades
 
-**Status do projeto:** Em desenvolvimento.
+- Emissão de senhas normais e preferenciais.
+- Atendimento em três especialidades:
+  - Clínica Geral
+  - Cardiologia
+  - Ortopedia
+- Organização independente das filas por especialidade.
+- Chamada do próximo paciente.
+- Consulta das filas de espera.
+- Exibição da última senha chamada.
+- Estimativa do tempo de espera.
+- Histórico de atendimentos realizados.
+- Aviso quando não existem pacientes aguardando.
 
-## Objetivos
+## 3. Estruturas de Dados Utilizadas
 
-- Organizar o atendimento dos pacientes.
-- Permitir a emissão de senhas normais e preferenciais.
-- Gerenciar filas independentes por especialidade médica.
-- Garantir prioridade aos pacientes preferenciais.
-- Registrar o histórico de atendimentos.
-- Apresentar estimativas de tempo de espera.
+- **Deque:** organização das filas de pacientes.
+- **Listas:** armazenamento do histórico.
+- **Dicionários:** organização das especialidades e registros.
 
-## Funcionalidades
+## 4. Regra de Prioridade
 
-- [ ] Cadastro e seleção de especialidades médicas.
-- [ ] Emissão de senhas normais e preferenciais.
-- [ ] Gerenciamento de filas independentes.
-- [ ] Atendimento prioritário.
-- [ ] Chamada e registro de senhas.
-- [ ] Painel de acompanhamento dos atendimentos.
-- [ ] Estimativa de tempo de espera.
-- [ ] Tratamento de exceções.
+O sistema atende primeiro os pacientes preferenciais. Quando não existem pacientes preferenciais aguardando, são chamados os pacientes da fila normal.
 
-##  Especialidades médicas
+Dentro de cada categoria, é respeitada a ordem de chegada (FIFO).
 
-O sistema contará inicialmente com três especialidades:
+## 5. Organização dos Arquivos
 
-- Clínica Geral
-- Cardiologia
-- Ortopedia
+- `main.py`: inicia o sistema.
+- `filas.py`: controla as filas e as senhas.
+- `sistema.py`: gerencia as especialidades e os atendimentos.
+- `interface.py`: apresenta a interface gráfica.
 
-## Estruturas de dados utilizadas
-
-O projeto aplicará os seguintes conceitos:
-
-- **Fila FIFO:** organiza os pacientes conforme a ordem de chegada.
-- **Fila de prioridade:** permite que pacientes preferenciais sejam atendidos antes dos pacientes normais.
-- **Estruturas independentes:** cada especialidade terá sua própria fila normal e preferencial.
-
-## Regra de prioridade
-
-O atendimento será organizado por especialidade médica.
-
-A regra adotada será:
-
-1. Os pacientes preferenciais serão atendidos primeiro.
-2. Dentro da fila preferencial, será respeitada a ordem de chegada (FIFO).
-3. Quando não houver pacientes preferenciais aguardando, serão atendidos os pacientes normais, também respeitando a ordem FIFO.
-
-Essa política será aplicada independentemente em cada especialidade.
-
-## Tempo estimado de espera
-
-O sistema utilizará uma média de 30 minutos por atendimento.
-
-A estimativa será calculada considerando a quantidade de pacientes que estão à frente na ordem de atendimento, respeitando a prioridade e a especialidade selecionada.
-
-O cálculo considera o atendimento sequencial em cada especialidade.
-
-## Tecnologias utilizadas
+## 6. Tecnologias Utilizadas
 
 - Python
 - Tkinter
-- Git
-- GitHub
 - Visual Studio Code
+- Git e GitHub
 
-## Como executar o projeto
+## 7. Como Executar o Projeto
 
-1. Instale o Python em seu computador.
-2. Clone este repositório:
+1. Instale o Python.
+2. Baixe ou clone o repositório.
+3. Abra a pasta no Visual Studio Code.
+4. Execute no terminal:
 
-   ```bash
-   git clone URL_DO_REPOSITORIO
-   ```
+```bash
+python src/main.py
+```
 
-3. Acesse a pasta do projeto:
+## 8. Considerações Finais
 
-   ```bash
-   cd Sistema-Filas-Clinica-Medica
-   ```
+O sistema foi desenvolvido como atividade acadêmica da disciplina de Estrutura de Dados, com o objetivo de aplicar conceitos de filas, listas, dicionários e organização de dados em uma aplicação prática.
 
-4. Execute a aplicação:
+## 9. Imagens do Sistema
 
-   ```bash
-   python src/main.py
-   ```
+### 9.1 Tela principal do sistema
 
-**Observação:** O Tkinter normalmente já acompanha a instalação do Python.
+![Tela principal do sistema](./imagens/tela-principal.png)
 
-## Imagens do sistema
+### 9.2 Histórico de atendimentos
 
-As imagens da interface gráfica serão adicionadas nesta seção após o desenvolvimento da aplicação.
-
-## Integrantes
-
-- Maria Eduarda Oliveira Pereira
-- 
--
-
-## Informações acadêmicas
-
-**Instituição:** Centro Universitário UDF  
-**Disciplina:** Estrutura de Dados II  
-**Professora:** Karla Sartin  
-**Ano:** 2026
-
----
-
-Desenvolvido como atividade acadêmica para aplicação prática dos conceitos de Estrutura de Dados II.
+![Histórico de atendimentos](./imagens/historico.png)
