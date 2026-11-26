@@ -74,3 +74,9 @@ As imagens abaixo apresentam a interface do sistema e o histórico de atendiment
 ### 9.2 Histórico de atendimentos
 
 [Visualizar histórico de atendimentos](https://drive.google.com/file/d/1BT02lo0gE4nAA0AVN33jdw25_T5Jucq3/view?usp=drive_link)
+
+## 10. Vídeo Demonstrativo
+
+O vídeo abaixo apresenta o funcionamento do Sistema de Gerenciamento de Senhas para Clínica Médica, demonstrando suas principais funcionalidades, emissão e chamada de senhas, atendimento prioritário e histórico de atendimentos.
+
+[Assistir ao vídeo demonstrativo](https://drive.google.com/file/d/1O60SqOKMZbzMnUGUIHXncGq3QzkbJgk5/view?usp=drive_link)
